@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato via email</title>
+</head>
+
+
+<body>
+    <h1>formulario de Contato via email</h1>
+    <hr>
+    
+    <form method="post" action="https://api-send-email-m9xz.onrender.com/dudaf1691@gmail.com">
+        <div>
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" placeholder="Insira seu nome">
+        </div>
+        <br>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Insira aqui seu e-mail">
+        </div>
+        <br>
+        <div>
+            <label for="select">Select</label>
+            <select name="subject" id="subject">
+                <option value="assunto1">Assunto 1</option>
+            <option value="assunto2">Assunto 2</option>
+            <option value="assunto3">Assunto 3</option>
+            </select>
+            
+        </div>
+        <div>
+            <label for="menssage">Menssagem</label> <br>
+            <textarea name="menssage" id="menssage" cols="30" rows="10"
+                placeholder="Insira aqui sua mensagem"></textarea>
+        </div>
+        <div>
+            <button type="reset">Apagar tudo</button>
+            <button>Enviar menssagem</button>
+        </div>
+    </form>
+</body>
+
+
+</html>

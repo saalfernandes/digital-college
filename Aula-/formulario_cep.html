@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class ="bg-dark text-light">
+   <div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form action="">
+                <div>
+                    <label for="cep">CEP:</label>
+                    <input class="form-control" type="text" id="cep" name="cep" required>
+                    <button type="button" onclick="buscarCep()">buscar</button>
+                </div>
+                <div>
+                    <label for="logradouro">Logradouro:</label>
+                    <input class="form-control" type="text" id="logradouro" name="logradouro" readonly>
+                </div>
+                <div>
+                    <div>
+                        <label for="bairro">Bairro:</label>
+                        <input class="form-control" type="text" id="bairro" name="bairro" readonly>
+                    <div>
+                        <label for="complemento">Complemento</label>
+                        <input class="form-control" type="text" id="complemento" name="complemento" readonly>
+                    </div>
+                    <div>
+                        <label for="cidade">Cidade</label>
+                        <input class="form-control" type="text" id="cidade" name="cidade">
+                    </div>
+                    <button>Salvar</button>
+                </div>
+            </form>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.50471699177!2d-46.6367758262981!3d-23.550309878807404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59abaaae4233%3A0xd9186faf714bc5b1!2sPra%C3%A7a%20da%20S%C3%A9%20-%20Se%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001001-000!5e0!3m2!1spt-BR!2sbr!4v1736605808345!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+   </div>
+   
+    <script>
+        function buscarCep() {
+            const cep = document.querySelector('#cep').value;
+            if (cep.length != 8) {
+                alert('Cep invalido! Informe um CEP com 8 digitos.')
+                return;
+            }
+            const url = `https://viacep.com.br/ws/${cep}/json/`
+            const consulta = fetch(url)
+            consulta.then((resposta) => {
+                return resposta.json()
+            }).then((dados) => {
+                document.querySelector("#logradouro").value = dados.logradouro
+                document.querySelector("#bairro").value = dados.bairro
+                document.querySelector('#complemento').value = dados.complemento
+                document.querySelector('#cidade').value = dados.localidade
+                console.log(dados.logradouro)
+                console.log(dados.bairro)
+                console.log(dados)
+            }) .catch((error) => {
+                console.log(error)
+            })  
+        }
+        const formEndereco = document.querySelector('#form-endereco')
+
+    </script>
+</body>
+</html>

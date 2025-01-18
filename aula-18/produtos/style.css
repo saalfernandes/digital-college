@@ -1,0 +1,46 @@
+/* Resetando margens e padding */
+* {
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+}
+
+/* Corpo da página */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/*Cabeçalho*/
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin:0;
+    font-size: 24px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a :hover {
+    text-decoration: underline;
+}
+
+/*Layout do conteúdo*/

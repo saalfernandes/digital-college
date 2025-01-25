@@ -1,0 +1,15 @@
+{
+  "name": "my-react-app",
+  "version": "1.0.0",
+  "author": "Duda Fernandes",
+  "scripts": {
+
+},
+"description": "Projeto de Sala de aula",
+"license": "MIT",
+"dependencies": {
+  "animate.css": "4.1.1",
+  "axios": "1.7.9",
+  "booststrap": "5.3.3"
+}
+}

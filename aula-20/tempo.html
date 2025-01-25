@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script src="node_modules/axios/dist/axios.min.js"></script>
+<script>
+    function getCep(cep) {
+        axios.get(`https://viacep.com.br/ws/${cep}/json`)
+       .then(dados => {
+        console.log(dados.data);
+        const endereço = dados.dados.data
+        document.write(endereço.logradouro + '<br/>')
+        document.write(endereço.bairro + '<br/>')
+        document.write(endereço.localidade + '<br/>')
+        document.write(endereço.regiao + '<br/>')
+        document.write(endereço.estado + '<br/>')
+        document.write(endereço.uf)
+    })
+    .catch((error) => {
+        console.error(error)
+    })
+}
+getCep('6076000')
+</script>
+</body>
+</html>

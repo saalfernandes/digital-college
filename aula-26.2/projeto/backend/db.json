@@ -1,0 +1,46 @@
+{
+  "products": [],
+  "users": [
+    {
+      "id": 1,
+      "username": "Admin",
+      "email": "admin@admin.com.br",
+      "password": "123123",
+      "address": {
+        "street": "Rua 1",
+        "number": "123",
+        "city": "Cidade",
+        "state": "SP",
+        "country": "Brasil"
+      }
+    },
+    {
+      "id": 2,
+      "username": "Admin 2",
+      "email": "admin@admin.com.br",
+      "password": "123123",
+      "address": {
+        "street": "Rua 1",
+        "number": "123",
+        "city": "Cidade",
+        "state": "SP",
+        "country": "Brasil"
+      }
+    },
+    {
+      "id": "b8de",
+      "username": "Duda Fernandes",
+      "email": "admin@admin.com.br",
+      "password": "123123",
+      "address": {
+        "street": "Rua 1",
+        "number": "123",
+        "city": "Cidade",
+        "state": "SP",
+        "country": "Brasil"
+      }
+    }
+  ],
+  "orders": [],
+  "transactions": []
+} 
